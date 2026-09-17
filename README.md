@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Novi — Landing Page
+
+A responsive marketing landing page for **Novi**, a project and task management tool built for small, fast-moving teams.
+
+**Live preview:** [novi-eosin.vercel.app](https://novi-eosin.vercel.app)
+
+## Tech Stack
+
+- **Next.js 16** (App Router, Turbopack)
+- **React 19** + **TypeScript**
+- **Tailwind CSS v4** — custom design tokens for spacing, typography, colors, and border radius
+- **Framer Motion** — scroll-reveal, stagger animations, hover/tap states, layout transitions, and parallax
+- **Lenis** — buttery smooth scrolling with momentum
+- **Material Symbols Outlined** — icon system
+- **Google Fonts** — Space Grotesk (display), Geist (body/labels)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+git clone https://github.com/SurJanThakuri/novi.git
+cd novi
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev     # development server
+npm run build   # production build
+npm run start   # run production build locally
+npm run lint    # run eslint
+```
 
-## Learn More
+## Sections
 
-To learn more about Next.js, take a look at the following resources:
+| Section | Description |
+|---|---|
+| **Navbar** | Sticky header with scroll-aware glass blur, animated mobile menu with staggered link reveal |
+| **Hero** | Headline with SVG underline draw, cursor-tracked parallax mockup, floating pills, magnetic CTAs, draggable kanban cards |
+| **Integrated Lifecycle** | 4 interactive stage selector cards with animated counters (0 Tabs, <30s, 48ms, 100%), cross-fade showcase panels |
+| **Product Features** | Tabbed view (Board, List, Timeline, Notes) with animated tab indicator, project header with avatar stack |
+| **Core Capabilities** | 4 asymmetric feature cards with 3D tilt, animated sprint velocity bar, timeline gantt animation, migration selector |
+| **Teams** | 3 use-case cards (Startups, Agencies, Product & Design) with 3D tilt and spring-animated icons |
+| **Integrations** | 3x2 grid of tools (Figma, GitHub, Slack, Notion, Linear, Google Drive) with magnetic hover |
+| **CTA** | Pulsing ambient gradients, dual magnetic CTAs |
+| **Footer** | Email subscribe form, 4-column link grid, social links |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Interactive Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Component | File | Description |
+|---|---|---|
+| `MagneticButton` | `src/components/ui/interactive.tsx` | Cursor-following magnetic pull with configurable strength |
+| `TiltCard` | `src/components/ui/interactive.tsx` | 3D perspective tilt tracking cursor position with glare effect |
+| `AnimatedCounter` | `src/components/ui/interactive.tsx` | Scroll-triggered count-up with cubic easing |
+| `FadeIn` | `src/components/ui/motion.tsx` | Scroll-triggered fade + directional slide |
+| `Stagger` / `StaggerItem` | `src/components/ui/motion.tsx` | Staggered children reveal on scroll |
+| `ScaleIn` | `src/components/ui/motion.tsx` | Scroll-triggered scale-up entrance |
 
-## Deploy on Vercel
+## Design System
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Custom Tailwind v4 theme tokens defined in `src/app/globals.css`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Colors**: Warm "Studio Precision" palette — primary terracotta `#aa3015`, warm parchment surfaces, charcoal text
+- **Typography**: Space Grotesk for display/headlines, Geist for body/labels
+- **Spacing**: `space-xs` through `space-xl`, `gutter`, `margin` tokens
+- **Border Radius**: `sm: 0.125rem`, `lg: 0.25rem`, `xl: 0.5rem`, `full: 0.75rem`
+
+## File Structure
+
+```
+src/
+├── app/
+│   ├── globals.css          # Tailwind v4 theme tokens
+│   ├── layout.tsx           # Root layout with Google Fonts
+│   └── page.tsx             # Main page assembly
+├── components/
+│   ├── layout/
+│   │   ├── navbar.tsx       # Sticky navbar with mobile menu
+│   │   ├── footer.tsx       # Footer with email form
+│   │   └── smooth-scroll.tsx # Lenis wrapper
+│   ├── sections/
+│   │   ├── hero.tsx         # Hero with parallax mockup
+│   │   ├── lifecycle.tsx    # 4-stage interactive lifecycle
+│   │   ├── product-features.tsx # Tabbed product view
+│   │   ├── core-capabilities.tsx # 4 feature cards
+│   │   ├── teams.tsx        # 3 use-case cards
+│   │   ├── design-system.tsx # Integrations grid
+│   │   └── cta.tsx          # Final CTA
+│   └── ui/
+│       ├── motion.tsx       # Animation wrappers
+│       └── interactive.tsx  # Magnetic, tilt, counter components
+└── lib/
+    └── constants.ts         # Nav links, footer data
+```
+
+## Notes
+
+No backend/API is connected — this is a static marketing page. Email signup and CTAs are UI-only.
