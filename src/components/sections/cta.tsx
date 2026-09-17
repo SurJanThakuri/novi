@@ -29,7 +29,7 @@ export function CTA() {
                 </div>
               </FadeIn>
               <FadeIn delay={0.2}>
-                <h2 className="font-display-lg text-[26px] leading-[32px] md:text-display-lg-mobile lg:text-[38px] lg:leading-[44px] text-on-surface tracking-tight font-semibold">
+                <h2 className="font-display-lg text-display-lg-mobile md:text-[38px] text-on-surface tracking-tight font-semibold">
                   Less switching. More shipping.
                 </h2>
               </FadeIn>

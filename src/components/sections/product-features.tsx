@@ -147,7 +147,7 @@ const tabContent: Record<string, ReactNode> = {
               <div className="font-body-sm text-body-sm text-secondary">Ensure drawer transitions are smooth at 60fps</div>
             </div>
           </div>
-          <span className="bg-primary/10 text-primary px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">In Progress</span>
+          <span className="bg-primary/10 text-primary px-2 py-0.5 text-nowrap rounded font-label-sm text-label-sm font-semibold">In Progress</span>
         </div>
         <div className="py-space-sm flex items-center justify-between">
           <div className="flex items-center gap-space-md">
@@ -174,19 +174,19 @@ const tabContent: Record<string, ReactNode> = {
           <div className="flex items-center gap-3">
             <span className="w-32 font-label-sm text-label-sm text-on-surface font-semibold truncate">Design Tokens</span>
             <div className="flex-1 bg-surface-container-low h-6 rounded-md relative overflow-hidden">
-              <div className="absolute left-0 top-1 bottom-1 w-2/5 bg-primary/20 rounded text-primary font-mono text-[10px] flex items-center px-2 font-bold">100% Complete</div>
+              <div className="absolute left-0 top-1 bottom-1 w-2/5 bg-primary/20 rounded text-primary font-mono text-[10px] flex text-nowrap items-center px-2 font-bold">100% Complete</div>
             </div>
           </div>
           <div className="flex items-center gap-3">
             <span className="w-32 font-label-sm text-label-sm text-on-surface font-semibold truncate">Mobile Views</span>
             <div className="flex-1 bg-surface-container-low h-6 rounded-md relative overflow-hidden">
-              <div className="absolute left-1/4 top-1 bottom-1 w-1/2 bg-primary rounded text-on-primary font-mono text-[10px] flex items-center px-2 font-bold shadow-sm">In Flight (Due Oct 28)</div>
+              <div className="absolute left-1/4 top-1 bottom-1 w-1/2 bg-primary rounded text-on-primary font-mono text-[10px] text-nowrap flex items-center px-2 font-bold shadow-sm">In Flight <span className="hidden sm:block">(Due Oct 28)</span></div>
             </div>
           </div>
           <div className="flex items-center gap-3">
             <span className="w-32 font-label-sm text-label-sm text-on-surface font-semibold truncate">Public Launch</span>
             <div className="flex-1 bg-surface-container-low h-6 rounded-md relative overflow-hidden">
-              <div className="absolute left-3/4 top-1 bottom-1 w-1/5 bg-secondary rounded text-on-secondary font-mono text-[10px] flex items-center px-2">Planned Nov 6</div>
+              <div className="absolute left-2/4 sm:left-3/4 top-1 bottom-1 w-1/2 md:w-1/5 bg-secondary rounded text-on-secondary font-mono text-[10px] text-nowrap flex items-center px-2">Planned Nov 6</div>
             </div>
           </div>
         </div>
@@ -265,7 +265,7 @@ export function ProductFeatures() {
             {/* Project Header */}
             <div className="p-space-sm md:p-space-md bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm md:gap-space-md">
               <div className="flex items-center gap-space-sm md:gap-space-md">
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-bold shadow-sm">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-bold shadow-sm">
                   W
                 </div>
                 <div>
@@ -283,8 +283,8 @@ export function ProductFeatures() {
                   <div className="inline-block h-6 w-6 md:h-7 md:w-7 rounded-full bg-tertiary-container text-on-tertiary text-[9px] md:text-[10px] font-bold flex items-center justify-center ring-2 ring-surface">TS</div>
                   <div className="inline-block h-6 w-6 md:h-7 md:w-7 rounded-full bg-surface-container-highest text-on-surface text-[9px] md:text-[10px] font-bold flex items-center justify-center ring-2 ring-surface">+4</div>
                 </div>
-                <button className="bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider px-space-sm md:px-space-md py-1.5 md:py-2 rounded-lg shadow-sm transition-colors flex items-center gap-1 font-semibold" type="button">
-                  <span className="material-symbols-outlined text-[14px] md:text-[16px]">share</span> <span className="hidden sm:inline">Share Board</span>
+                <button className="bg-primary hover:bg-primary-container text-on-primary font-label-xs text-label-xs sm:font-label-sm sm:text-label-sm uppercase tracking-wider px-space-sm md:px-space-md py-1.5 md:py-2 rounded-lg shadow-sm transition-colors flex items-center gap-1 font-semibold" type="button">
+                  <span className="material-symbols-outlined text-[11px] sm:text-[14px] md:text-[16px]">share</span> <span className="hidden sm:inline">Share Board</span>
                 </button>
               </div>
             </div>

@@ -138,7 +138,7 @@ export function Hero() {
 
         {/* Trust Badges */}
         <FadeIn delay={0.55}>
-          <div className="mt-space-sm md:mt-space-md flex flex-wrap items-center justify-center gap-x-space-sm md:gap-x-space-md gap-y-1 font-body-sm text-body-sm text-secondary">
+          <div className="mt-space-md flex flex-wrap items-center justify-center gap-x-space-sm md:gap-x-space-md gap-y-1 font-body-sm text-body-sm text-secondary">
             {["Free 14-day trial", "No credit card required", "2-minute setup"].map((item, i) => (
               <span key={item} className="flex items-center gap-1.5">
                 {i > 0 && <span className="text-surface-dim mr-1.5">•</span>}
@@ -246,7 +246,7 @@ export function Hero() {
               transformPerspective: 1200,
             }}
           >
-            <div className="h-11 bg-surface-container-low px-space-md flex items-center justify-between select-none">
+            <div className="h-11 bg-surface-container-low sm:px-space-md flex items-center justify-between select-none">
               <div className="flex items-center gap-2">
                 <motion.span
                   className="w-3 h-3 rounded-full bg-[#ec6a5e] inline-block shadow-sm cursor-pointer"
@@ -264,8 +264,8 @@ export function Hero() {
               <div className="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
                 <span className="material-symbols-outlined text-[16px] text-primary">folder_open</span>
                 <span className="font-semibold text-on-surface">Studio Monolith</span>
-                <span className="text-secondary">/</span>
-                <span>Website Redesign Q3</span>
+                <span className="text-secondary hidden sm:block">/</span>
+                <span className="hidden sm:block">Website Redesign Q3</span>
               </div>
               <div className="flex items-center gap-space-sm">
                 <span className="font-label-sm text-label-sm uppercase tracking-wider bg-surface-container px-2 py-0.5 rounded text-on-surface-variant font-semibold">Sprint 04</span>
@@ -323,7 +323,7 @@ export function Hero() {
                     </div>
                     <div className="flex items-center gap-space-xs">
                       <motion.button
-                        className="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors"
+                        className="px-2 py-1 rounded bg-surface-container hidden sm:block hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors"
                         type="button"
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.97 }}
