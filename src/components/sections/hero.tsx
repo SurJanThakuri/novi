@@ -69,9 +69,9 @@ export function Hero() {
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">
-              ✦ Novi 2.0 is live
+              ✦ Novi
             </span>
-            <span className="hidden sm:inline text-secondary font-label-sm text-label-sm">— Built for fast-moving teams</span>
+            <span className="inline text-secondary font-label-sm text-label-sm">— Built for fast-moving teams</span>
             <span className="material-symbols-outlined text-[14px] text-secondary group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
           </motion.div>
         </FadeIn>
